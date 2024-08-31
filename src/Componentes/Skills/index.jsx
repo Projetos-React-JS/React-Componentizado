@@ -1,19 +1,18 @@
+import Card from "../Card";
+
 function Skills({ skills }) {
+
+  const hablidades = [
+    {titulo:"HTML", nivel:"Avançado"},
+    {titulo:"CSS", nivel:"Intermediário"},
+    {titulo:"JavaScript", nivel:"Básico"},
+    {titulo:"React", nivel:"Sênio"}
+  ]
+
   return (
     <div className="skills">
       <h2>Habilidades</h2>
-                <div className="skill-card">
-                    <h3>HTML</h3>
-                    <p>Nível: Avançado</p>
-                </div>
-                <div className="skill-card">
-                    <h3>CSS</h3>
-                    <p>Nível: Intermediário</p>
-                </div>
-                <div className="skill-card">
-                    <h3>JavaScript</h3>
-                    <p>Nível: Básico</p>
-                </div>
+      <Card dados={hablidades}/>
     </div>
   );
 }
