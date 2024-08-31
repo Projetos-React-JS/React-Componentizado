@@ -1,19 +1,33 @@
+import Card from "../Card";
+
 function Skills({ skills }) {
+
+  const habilidades = [
+    {
+      titulo: "HTML",
+      nivel: "Avançado",
+      tempoxp: "6 meses",
+      color: "red"
+    },
+    {
+      titulo: "Node JS",
+      nivel: "Noob",
+      tempoxp: "1 meses",
+      color: "blue",
+      imagemIcone: "/assets/curinthia.png"
+    },
+    {
+      titulo: "Python",
+      nivel: "Dó",
+      tempoxp: "0 meses",
+      color: "green"
+    }
+  ]
+
   return (
     <div className="skills">
       <h2>Habilidades</h2>
-                <div className="skill-card">
-                    <h3>HTML</h3>
-                    <p>Nível: Avançado</p>
-                </div>
-                <div className="skill-card">
-                    <h3>CSS</h3>
-                    <p>Nível: Intermediário</p>
-                </div>
-                <div className="skill-card">
-                    <h3>JavaScript</h3>
-                    <p>Nível: Básico</p>
-                </div>
+      <Card dados={habilidades} />
     </div>
   );
 }
